@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: aliceblue;
+    padding-top: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/**/
+/*-------------------------------------------------*/
+.inicial {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 90px;
+    padding: 30px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #fff,
+        0 0 10px rgba(0, 255, 255, 0.848),
+        0 0 20px rgba(0, 255, 255, 0.79),
+        0 0 40px rgba(0, 255, 255, 0.766);
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+/*----------------------------------------------------*/
+#maquina::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#maquina {
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #fff,
+        0 0 10px rgba(0, 255, 255, 0.422),
+        0 0 20px rgba(0, 255, 255, 0.518),
+        0 0 40px rgba(0, 255, 255, 0.506);
+}
+
+/*-----------------------------------------------------*/
+
+/* Sidebar base */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+/* Botón redondo */
+.sidebar a {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: #0d6efd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Hover en icono */
+.sidebar a:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Tooltip */
+.sidebar a .tooltip {
+    position: absolute;
+    left: 60px;
+    background-color: #0d6efd;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+/* Mostrar tooltip en hover */
+.sidebar a:hover .tooltip {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        left: 0.5rem;
+    }
+
+    .sidebar a .tooltip {
+        display: none;
+    }
+}
+
+/*---------------------------------------------------------*/
+.navbar-custom {
+    background-color: rgba(228, 224, 224, 0.087);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+    /* desenfoque suave */
+}
+
+.navbar-scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*----------------------sobre mi----------------------------*/
+.tamaño-imagen {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+li a {
+    color: #19b9e1;
+    text-decoration: none;
+}
+
+.caja {
+    background-color: rgba(0, 0, 0, 0.381);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/*-----------------------------------------*/
+/* Sección de contacto */
+#contacto {
+    background-color: #f5f3f313;
+}
+
+#contacto a {
+    color: #ff0062;
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    text-decoration: underline;
+}
+
+/*------------------habilidades---------------*/
+.progress {
+    height: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Opcional: para que se vean bien en fondo oscuro */
+.bg-secondary {
+    background-color: #2c2c2c !important;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+/*-----------------proyectos--------------*/
+
+#proyectos h2 {
+  font-size: 2rem;
+  color: #222;
+}
+
+#proyectos .card,
+#proyectos .border {
+  transition: all 0.2s ease-in-out;
+}
+
+#proyectos .border:hover {
+  background-color: #f1f1f1;
+  border-color: #ccc;
+}
+
+a.text-decoration-none {
+  color: #333;
+}
+
+a.text-decoration-none:hover {
+  color: #007bff;
+}
+
+.btn {
+  border-radius: 2rem; /* bordes redondeados estilo pill */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+  background-color: #222;
+  color: #fff;
+}
+#branding img {
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#branding img:hover {
+  transform: scale(1.03);
+}
+
+#branding .border {
+  transition: box-shadow 0.3s ease;
+}
+
+#branding .border:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/*---------------------------------------------*/
+/*----------------portfolio----------------------*/
+#portfolio {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Fondo suave semitransparente */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#portfolio:hover {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/*---------------------------------------------*/
+/*----------------contacto----------------------*/
+#contacto {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #ffffff;
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(13, 202, 240, 0.2);
+    margin-top: 40px;
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#contacto p,
+#contacto li,
+#contacto a {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+#contacto a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contacto a:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#contacto ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#contacto i {
+    color: #0dcaf0;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+#contacto .social-icons a {
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+#contacto .social-icons a:hover {
+    transform: scale(1.2);
+    color: #0dcaf0;
+}
